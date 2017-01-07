@@ -1,5 +1,5 @@
 # ROP
-##A discussion and collection of the basic (and hopefully sometime, advanced) concepts in ROP. Edit
+###A discussion and collection of the basic (and hopefully sometime, advanced) concepts in ROP.
 
 Source Code for problems rop(1-4) available on https://github.com/picoCTF/2013-Problems. These 4 problems were taken from picoCTF 2013.
 
