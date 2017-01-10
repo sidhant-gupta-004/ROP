@@ -17,3 +17,6 @@ This one I can argue, is the simplest. We just have to find the address of /bin/
 
 ###ropasaurusrex
 This one is from Plaid CTF 2013. Here, we have to everything by ourselves: find address of read(), calculate address of system() from it, then write /bin/sh somewhere (writeable, duh) in the program (I chose the .dynamic section), and then call system with /bin/sh as argument. My first tutorial problem in ROP.
+
+###precision_csaw2015
+In this question, we are given the memory address from which our buffer is wrote on the stack: this address is changed each time main is called by setvbuf(). NX is disabled, so you can simply write shellcode on this address and return your main to it; but I tried a different approach: I first leaked out the address of puts function and calculated the addresses of system function and /bin/sh string from that, then I modified my buffer to contain system_address and /bin/sh_address (using scanf()) at the ret call and got a shell. All because I forgot to do chekcsec; newbie troubles :P.
